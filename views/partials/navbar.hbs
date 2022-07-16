@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .nav{
+      background-color: #212529;
+      font-size: 1.3rem;
+      
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-lg  navbar-dark py-4 border-bottom nav">
+  <div class="container">
+    <a class="navbar-brand nav_num " href="#">{{data.brandName}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">     
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+       {{#each data.links}}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+        </li>
+        {{/each}}
+
+
+          <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others
+          </a>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item" type="button">Action</button></li>
+    <li><button class="dropdown-item" type="button">Another </button></li>
+    <li><button class="dropdown-item" type="button">Something </button></li>
+  </ul>
+</div>
+
+
+
+
+        {{!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Woman</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Others</a>
+        </li> --}}
+
+        <ul/> 
+    </div>
+ </div>
+</nav>
+</body>
+</html>
